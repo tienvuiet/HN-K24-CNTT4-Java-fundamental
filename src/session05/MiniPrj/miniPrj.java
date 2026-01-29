@@ -3,6 +3,7 @@ package session05.MiniPrj;
 import java.util.Scanner;
 
 public class miniPrj {
+    // Tim cap so co tong bang K: Hưng
     static void twoSum() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap so phan tu: ");
@@ -28,7 +29,7 @@ public class miniPrj {
         System.out.println("Khong tim thay cap so.");
     }
 
-    //bai2
+    //bai2.Don so 0 ve cuoi: Tuấn Minh
     static void lastZero(int[] a) {
         int position = 0;
         for (int i = 0; i < a.length; i++) {
@@ -42,7 +43,7 @@ public class miniPrj {
         }
     }
 
-    //bai3
+    //bai3 Kiem tra chuoi doi xung: Tiến
     public static boolean validPalindrome(String s){
             String chuSach = s.replaceAll("[^a-zA-Z]", "").toLowerCase();
             int left = 0;
@@ -57,7 +58,7 @@ public class miniPrj {
             return true;
     }
 
-    //bai4
+    //bai4 Dao nguoc tu trong cau: Duy
     public static String reverse(String input) {
         if (input == null || input.trim().isEmpty()) {
             return "";
@@ -75,7 +76,7 @@ public class miniPrj {
         return sb.toString();
     }
 
-    // bai 5
+    // bai 5 .So hanh phuc : Khánh
     public static int sum(int n){
         int sum = 0;
         while (n>0) {
@@ -85,14 +86,14 @@ public class miniPrj {
         }
         return sum;
     }
-    public static boolean isHappyNumber(int n){
-        int slow, fast;
-        slow = fast = n;
-        do {
-            slow = sum(slow);
-            fast = sum(sum(fast));
-        } while (slow != fast);
-        return (slow == 1);
+    public static boolean isHappyNumber(int n) {
+        for (int i = 0; i < 20; i++) {
+            n = sum(n);
+            if (n == 1) {
+                return true;
+            }
+        }
+        return false;
     }
     static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
