@@ -155,6 +155,9 @@ public class miniPrj {
                         System.out.println(n + " khong phai la so hanh phuc");
                     }
                     break;
+                case 6:
+                    System.out.printf("Ban da thoat chuong trinh");
+                    break;
                 default:
                     System.out.println("Lua chon khong hop le!!");
             }
