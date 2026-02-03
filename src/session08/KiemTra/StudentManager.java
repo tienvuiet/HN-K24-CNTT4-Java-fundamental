@@ -33,21 +33,28 @@ public class StudentManager {
             System.out.println("Danh sach rong!");
             return;
         }
-        System.out.println("| Ma SV      | Ho ten              | Diem  | Hoc luc      |");
+        System.out.printf("| %-10s | %-20s | %-5s | %-12s |\n",
+                "Ma SV", "Ho ten", "Diem", "Hoc luc");
         for (int i = 0; i < count; i++) {
-            System.out.println(students[i]);
+            Student s = students[i];
+            System.out.printf("| %-10s | %-20s | %-5.2f | %-12s |\n", s.getId(), s.getName(), s.getScore(), s.getRank());
         }
     }
+
 
     public static void searchStudent() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap hoc luc can tim: ");
         String rank = sc.nextLine();
+
         boolean found = false;
-        System.out.println("| Ma SV      | Ho ten              | Diem  | Hoc luc      |");
+        System.out.printf("| %-10s | %-20s | %-5s | %-12s |\n",
+                "Ma SV", "Ho ten", "Diem", "Hoc luc");
+
         for (int i = 0; i < count; i++) {
-            if (students[i].getRank().equalsIgnoreCase(rank)) {
-                System.out.println(students[i]);
+            Student s = students[i];
+            if (s.getRank().equalsIgnoreCase(rank)) {
+                System.out.printf("| %-10s | %-20s | %-5.2f | %-12s |\n", s.getId(), s.getName(), s.getScore(), s.getRank());
                 found = true;
             }
         }
@@ -55,6 +62,7 @@ public class StudentManager {
             System.out.println("Khong tim thay sinh vien phu hop!");
         }
     }
+
 
     public static void sortStudents() {
         for (int i = 0; i < count - 1; i++) {
