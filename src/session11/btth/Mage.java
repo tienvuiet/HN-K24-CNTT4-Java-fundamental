@@ -43,14 +43,14 @@ public class Mage extends GameCharacter implements  ISkill{
 
     @Override
     public void useUltimate(GameCharacter target) {
-        System.out.println("2. [Pháp sư] " + getName() + " dùng chiêu cuối lên " + target.getName() + "!");
+        System.out.println("[Pháp sư] " + getName() + " dùng chiêu cuối lên " + target.getName() + "!");
         if(mana >= 50){
             mana -= 50;
             int damage = getAttackPower() * 2;
-            target.takeDamage(damage);
+            int realDame =   target.takeDamage(damage);
 
             System.out.println("   -> " + getName() + " tốn 50 mana. "
-                    + target.getName() + " mất " + damage + " máu.");
+                    + target.getName() + " mất " + realDame + " máu.");
         }
     }
 }

@@ -37,7 +37,7 @@ public class Warrior extends GameCharacter implements ISkill{
 
     @Override
     public void useUltimate(GameCharacter target) {
-        System.out.println("2. [Chiến binh] " + getName() + " dùng chiêu cuối lên " + target.getName() + "!");
+        System.out.println("[Chiến binh] " + getName() + " dùng chiêu cuối lên " + target.getName() + "!");
         int damage = getAttackPower() * 2;
         target.takeDamage(damage);
 

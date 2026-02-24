@@ -19,6 +19,7 @@ public class Main {
         yasuo.attack(veigar);
         veigar.attack(yasuo);
         veigar.attack(yasuo);
+        veigar.useUltimate(yasuo);
 
         System.out.println("\n=== THÔNG SỐ SAU LƯỢT ĐẤU ===");
 
